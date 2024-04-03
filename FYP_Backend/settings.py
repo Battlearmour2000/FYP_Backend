@@ -70,6 +70,15 @@ TEMPLATES = [
     },
 ]
 
+PASSWORD_HASHERS = [
+    "myproject.hashers.MyPBKDF2PasswordHasher",
+    "django.contrib.auth.hashers.PBKDF2PasswordHasher",
+    "django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher",
+    "django.contrib.auth.hashers.Argon2PasswordHasher",
+    "django.contrib.auth.hashers.BCryptSHA256PasswordHasher",
+    "django.contrib.auth.hashers.ScryptPasswordHasher",
+]
+
 WSGI_APPLICATION = "FYP_Backend.wsgi.application"
 
 

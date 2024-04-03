@@ -8,7 +8,7 @@ class User(models.Model):
     surname = models.CharField(max_length=100)
     email = models.EmailField(unique=True)
     # contact_information = models.ForeignKey('ContactInformation', on_delete=models.CASCADE)
-    role = models.ForeignKey('Role', on_delete=models.CASCADE)
+    # role = models.ForeignKey('Role', on_delete=models.CASCADE)
     password = models.CharField(max_length=100)  # For simplicity, should be hashed
     # profile_photo = models.ImageField(upload_to='profile_photos/', null=True, blank=True)
     language = models.CharField(max_length=50)
