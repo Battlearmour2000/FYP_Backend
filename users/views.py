@@ -8,22 +8,15 @@ from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from users.models import User
 
-# class UserListCreateAPIView(generics.ListCreateAPIView):
-#     queryset = User.objects.all()
-#     serializer_class = UserSerializer
-
-# class UserRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
-#     queryset = User.objects.all()
-#     serializer_class = UserSerializer
 
 @api_view(["GET"])
-def getData(request):
+def get_user(request):
     user = User.objects.all()
     serializer = UserSerializer(user, many=True)
     return Response(serializer.data)
 
 @api_view(['POST'])
-def postData(request):
+def create_user(request):
     serializer = UserSerializer(data=request.data)
     if serializer.is_valid():
         serializer.save()
