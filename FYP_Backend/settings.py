@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-nmt!$#1_^!j+=e!8&a!v!2=l!d%8xey+ck0(d2!axdvudk-8cm
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['fyp-backed.azurewebsites.net']
+ALLOWED_HOSTS = ['fyp-backed.azurewebsites.net', 'https://fyp-backed.azurewebsites.net/']
 
 
 # Application definition
