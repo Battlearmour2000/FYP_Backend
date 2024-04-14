@@ -60,7 +60,7 @@ def login(request):
     hashed_password = hash_password(password)  # Hash the provided password
     if hashed_password != user.password:  # Compare the hashed password with the stored hashed password
         hash_str = str(hashed_password)
-        return Response({'error': 'Invalid credentials', 'password': hash_str}, status=status.HTTP_401_UNAUTHORIZED)
+        return Response({'error': 'Invalid credentials'}, status=status.HTTP_401_UNAUTHORIZED)
 
     serializer = UserSerializer(user)
     return Response(serializer.data)
